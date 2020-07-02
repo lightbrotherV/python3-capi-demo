@@ -9,3 +9,7 @@ char* pyObj2string(PyObject *obj) {
     Py_XDECREF(str);
     return bytes;
 }
+
+PyObject* string2pyObj(char* str) {
+    return PyUnicode_FromString(str);
+}
