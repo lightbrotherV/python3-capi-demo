@@ -34,7 +34,7 @@ int main() {
     PyObject* instanceServer = PyObject_CallObject(serverClass,NULL);
     PyObject* sname = PyUnicode_FromString("sname");
     PyObject* skey = PyUnicode_FromString("skey");
-    PyObject* idparam = PyObject_GetAttrString(instanceServer, "name");
+    PyObject* idparam = PyObject_GetAttrString(instanceServer, "name_1");
     char* bytes = reprint(idparam);
     printf("REPR: %s\n", bytes);
     PyObject_SetAttr(instanceServer, sname, skey);
